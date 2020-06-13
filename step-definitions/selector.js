@@ -14,7 +14,7 @@ module.exports ={
   first_list: "#gist-pjax-container > div > div > div.col-9 > div.gist-snippet > div.gist-snippet-meta.d-inline-block.width-full > div > div:nth-child(2) > span > a:nth-child(2) > strong",
   my_filename_gist: "#gist-pjax-container > div > div > div.col-9 > div.gist-snippet > div.gist-snippet-meta.d-inline-block.width-full > div > div:nth-child(2) > span > a:nth-child(2) > strong",
   edit_button: "#gist-pjax-container > div.gisthead.pagehead.repohead.readability-menu.bg-gray-light.pb-0.pt-3.mb-4 > div > div.mb-3.d-flex > ul > li:nth-child(1) > a",
-  update_gist: ".btn btn-primary",
+  update_gist: "#edit_gist_103694004 > div > div.form-actions > button",
   delete_button: "#gist-pjax-container > div.gisthead.pagehead.repohead.readability-menu.bg-gray-light.pb-0.pt-3.mb-4 > div > div.mb-3.d-flex > ul > li:nth-child(2) > form > button",
 
 }

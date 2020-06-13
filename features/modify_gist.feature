@@ -16,8 +16,10 @@ Scenario Outline: Scenario Outline name:  I want to create a public gist
 	And I set text "<file_name>" in the "file_name_field" field
 	And I set text "<body_data>" in the "body_field" field
 	Then I click "create_public_gist" button
-	# Then My gist has been created with the "file_name" name
 	Then the element "file_name_after_created" is exist
+
+	# didnt work because always error when get the element text
+	# Then My gist has been created with the "file_name" name
 
 	# see list
 	And I click "gist_home" button
