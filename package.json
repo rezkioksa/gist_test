@@ -1,0 +1,35 @@
+{
+  "name": "nightwatch-api-cucumber",
+  "version": "1.0.0",
+  "description": "Demonstration for using Nightwatch API from CucumberJS test runner",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "cross-env NIGHTWATCH_ENV=chrome npm test",
+    "test:chromeHeadless": "cross-env NIGHTWATCH_ENV=chromeHeadless npm test",
+    "test:firefox": "cross-env NIGHTWATCH_ENV=firefox npm test",
+    "test:edge": "cross-env NIGHTWATCH_ENV=edge npm test",
+    "test:ie": "cross-env NIGHTWATCH_ENV=ie npm test",
+    "test:parallel": "cucumber-js --require-module @babel/register --require cucumber.conf.js --require step-definitions --parallel 2 --format node_modules/cucumber-pretty",
+    "test": "mkdirp report && cucumber-js --require-module @babel/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty --format json:report/cucumber_report.json",
+    "debug": "cross-env DEBUG=nightwatch-api NIGHTWATCH_ENV=chrome NIGHTWATCH_VERBOSE=true node --inspect ./node_modules/cucumber/bin/cucumber-js --require-module @babel/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "chromedriver": "^83.0.0",
+    "cross-env": "^7.0.2",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "cucumber-pretty": "^6.0.0",
+    "geckodriver": "^1.19.1",
+    "mkdirp": "^1.0.4",
+    "nightwatch": "^1.3.6",
+    "nightwatch-api": "latest",
+    "selenium-server-standalone-jar": "^3.141.59",
+    "selenium-standalone": "^6.17.0"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}
